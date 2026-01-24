@@ -92,6 +92,10 @@ android_app {
         proguard_flags_files: ["proguard-rules.pro"],
         shrink_resources: true,
     },
+
+    aaptflags: [
+        "--rename-manifest-package", "org.strixos.twelve",
+    ],
 }
 
 prebuilt_etc {
@@ -99,7 +103,7 @@ prebuilt_etc {
     product_specific: true,
     sub_dir: "sysconfig",
     src: "initial-package-stopped-states-org.lineageos.twelve.xml",
-    filename_from_src: true,
+    filename: "ipss_org.los.twelve.xml",
 }
 
 prebuilt_etc {
@@ -107,5 +111,5 @@ prebuilt_etc {
     product_specific: true,
     sub_dir: "sysconfig",
     src: "preinstalled-packages-org.lineageos.twelve.xml",
-    filename_from_src: true,
+    filename: "pp_org.los.twelve.xml",
 }

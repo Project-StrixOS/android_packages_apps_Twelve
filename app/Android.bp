@@ -23,6 +23,7 @@ android_app {
         "1.0",
         "--version-code",
         "1",
+        "--rename-manifest-package", "org.strixos.twelve",
     ],
 
     use_embedded_native_libs: true,
@@ -99,9 +100,6 @@ android_app {
         shrink_resources: true,
     },
 
-    aaptflags: [
-        "--rename-manifest-package", "org.strixos.twelve",
-    ],
 }
 
 prebuilt_etc {
